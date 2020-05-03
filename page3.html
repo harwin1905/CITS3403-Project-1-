@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        
+        <!-- Specify title for Page 3 - JavaScript -->
+        <title>JavaScript Page</title>
+
+        <!-- Link the CSS Stylesheet -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+        <!-- Create the top navigation bar for the page --> 
+        <div class="topnav">
+            <!-- //Link HTML page and title the first tab  -->
+            <a href="page1.html">HTML</a>
+            <!-- //Link CSS page and title the second tab -->
+            <a href="page2.html">CSS</a>
+            <!-- Link JS page and title the third tab -->
+            <a class="active" href="page3.html">JavaScript</a>
+            <!-- Link Bio page and title the last tab -->
+            <a href="page4.html">Author</a>
+        </div>
+
+        <!-- Heading for the title of the page -->
+        <h1>JavaScript (JS)</h1>
+
+        <!--JS Introduction-->
+        <h2>History and Evolution of JavaScript</h2>
+        <p>JavaScript is a well-known scripting language that is used to make web pages more interactive and dynamic. JS scripts are written along with HTML code, allowing the interaction between the two languages. JS can be implemented in many fields, such as front-end (user-interface design) and back-end (server-side coding) web development, game development and in mobile applications too. JavaScript was developed by Brendan Eich from NetScape Communications in 1995 and the language became a standard of the ECMA (European Computer Manufacturers Assosciation) in 1997. The standards released by the ECMA are known as ECMAScript (ES), therefore addressing the nomenclature of JavaScript versions. The evolution of the JavaScript language through the years is described below. </p>
+
+        <!-- ES1 - ES3 description -->
+        <h3><u>ES1 (1997) - ES3 (1999)</u></h3>
+        <p>ES1 was the first version of the standard and was released in 1997, after being submitted in 1995 by Brendan Eich. ES2 was released the following year and included minor editorial changes. The following year, ES3 was relased, as an annual update to the standard and notably included support for:</p>
+        <ul>
+            <li>Regular expressions</li>
+            <li>Try/catch exception handling</li>
+            <li>Improved string handling</li>
+            <li>Tighter error definitions</li>
+            <li>Numerical output formatting</li>
+        </ul>
+
+        <!-- ES5 description -->
+        <h3><u>ES5 (2009)</u></h3>
+        <p>Due to political differences regarding the complexity of the language, ES4 (2003) was never released and most of its new features were abandoned. Released 10 years on from the previous version (ES3), ES5 introduced a number of new features, of which some are listed below:</p>
+        <ul>
+            <li>Added "Strict Mode" -<i> more robust error-checking measures</i> </li>
+            <li>Added JSON support - <i>a file extension used for the interchanging of data across the web</i></li>
+            <li>Wide range of methods for Arrays</li>
+        </ul>
+        <p>In 2011, ES5.1 was released with added syntatic changes. </p>
+
+        <!-- ES6 description -->
+        <h3><u>ES6 2015</u></h3>
+        <p>The naming system for ECMA standards were changed to include the year after the respective ES versions. Notable features of ES6 include:</p>
+        <ul>
+            <li><b>let</b> statement - <i>allows declaration of variables with block scope</i></li>
+            <li><b>const</b> statement - <i>allows declaration of variables with a constant value</i></li>
+            <li>Arrow functions (<b>=></b>) - <i>shorthand syntax for writing function expressions</i></li>
+            <li>Introduction of JavaScript Classes</li>
+        </ul>
+
+        <!-- ES7 description -->
+        <h3><u>ES7 2016</u></h3>
+        <p>Compared to previous versions of the language, ES7 was much smaller in terms of number of features added. ES7 introduced only 2 new features. They were:</p>
+        <ul>
+            <li><b>Array.prototype.inclues</b> - <i>used to check for the presence of a specific value in an array.</i></li>
+            <li>Exponential Operator (**) - <i>mathematical operator used for exponential calculations</i></li>
+        </ul>
+
+        <!-- ES7 description -->
+        <h3><u>ES8 2017</u></h3>
+        <p>As part of another annual update, some notable inclusions of ES8 are: </p>
+        <ul>
+            <li>String padding - <i>used to add characters to a string to reach a specified length using <b>padStart()</b> and <b>padEnd()</b> methods</i></li>
+            <li><b>Object.value()</b> - <i>method to return an array of an object's own property values</i></li>
+            <li>Trailing commas - <i>allowed for trailing commas to appear in code</i></li>
+            <li>Async Functions</li>
+        </ul>
+
+        <!-- ES9 description -->
+        <h3><u>ES9 2018</u></h3>
+        <p>This update of the language intoduced the following features:</p>
+        <ul>
+            <li>Object Rest/Spread properties - <i>final arguments sent to a function are modified into arrays using the Rest parameter</i></li>
+            <li>Asynchronous Iteration - <i>async iterable objects can be used as loop iterations</i></li>
+            <li>Regular Expression (RegExp) improvments</li>
+        </ul>
+
+        <!-- ES10 description -->
+        <h3><u>ES10 2019</u></h3>
+        <p>This is the current version of JavaScript and some of its important features are:</p>
+        <ul>
+            <li><b>TrimStart() / TrimEnd()</b> - <i>removes whitespaces from the beginning/end of strings</i></li>
+            <li>Optional Catch Binding - <i>try/catch blocks can now be used without a parameter</i></li>
+            <li>Array Sort Stability - <i>rectified an issue from ES8 of an unstable QuickSort algorithm.</i></li>
+        </ul>
+
+        <!-- JS implementation description -->
+        <h2>Implementations of JavaScript</h2>
+
+        <!-- DOM description -->
+        <h3><u>Document Object Model (DOM) Manipulation</u></h3>
+        <p>The HTML Document Object Model (DOM) represents the page as a logical tree. Each branch is connected to a node and these nodes contain objects. The DOM connects to webpages through the use of scripts (generally JavaScript) and allows programmatic access to the tree. Using DOM, we have the capability to create dynamic HTML webpages. In the image attached below, we have a section of the DOM for this HTML page, representing the unordered list and its 3 child <b>&lt;li&gt;</b> elements. </p>
+        <br>
+
+        <!-- Image for representing DOM -->
+        <img class = "dom_img" src="assets/DOM_example_diagram.png" alt="DOM_example_diagram">
+        <br>
+        <p>In the following example, we are going to add list elements into a pre-existing list and change its colour once the new input has been added, using JavaScript DOM manipulation.</p>
+
+        <!-- Creating figure box to store HTML code for DOM example -->
+        <figure class="codebox">
+            <figcaption>HTML Code:</figcaption>
+            <pre><code>
+                &lt;p&gt;Here is a list of famous people, add your name below (I've added my name too!):&lt;/p&gt;
+                &lt;ul class = &quot;programs_list&quot;&gt;
+                    &lt;li&gt;Muhammad Ali&lt;/li&gt;
+                    &lt;li&gt;Robert Downey Jr.&lt;/li&gt;
+                    &lt;li&gt;Lion&lt;/li&gt;
+                    &lt;li&gt;Usain Bolt&lt;/li&gt;
+                    &lt;li&gt;Harwin Murali&lt;/li&gt;
+                &lt;/ul&gt;
+    
+                &lt;input class=&quot;list_input&quot; type=&quot;text&quot; /&gt;
+                &lt;button class=&quot;add_btn&quot;&gt;Add&lt;/button&gt;&lt;br&gt;
+                &lt;script src=&quot;dom.js&quot;&gt;&lt;/script&gt;
+
+                &lt;input class=&quot;list_input&quot; type=&quot;text&quot; /&gt;&lt;br&gt;
+                &lt;button class=&quot;add_btn&quot;&gt;Add&lt;/button&gt;
+                &lt;script src=&quot;script_file.js&quot;&gt;&lt;/script&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store JavaScript code for DOM example -->
+        <figure class="codebox">
+            <figcaption>JavaScript Code:</figcaption>
+            <pre><code>
+                const programsList = document.querySelector(".programs_list");
+                const listInput = document.querySelector(".list_input");
+                const addBtn = document.querySelector(".add_btn");
+
+                addBtn.addEventListener("click", function() {
+                    
+                    //create new list entry
+
+                    const newList = document.createElement("LI");
+                    const listContent = document.createTextNode(listInput.value);
+
+                    //add input value to the newly created list
+
+                    newList.appendChild(listContent);
+
+                    if (listInput.value == "") {
+                        alert("Please enter a value.");
+                        return false;
+                    }
+
+                    var letters = /^[a-z]/gi;
+                    if (!listInput.value.match(letters)){
+                        alert("Please enter letters only.");
+                        listInput.value = "";
+                        return false;
+                    }
+
+                    //attach the entry into the exisiting list 
+
+                    programsList.appendChild(newList);
+
+                    //change the colour of the list once it has been altered
+
+                    programsList.style.color = "orange";
+                });
+            </code></pre>
+        </figure>
+        
+        <!-- Creating figure box to store output for DOM example -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p>Here is a list of famous people, add your name below (I've added my name too!):</p>
+            <ul class = "programs_list">
+                <li>Muhammad Ali</li>
+                <li>Robert Downey Jr.</li>
+                <li>Usain Bolt</li>
+                <li>Harwin Murali</li>
+            </ul>
+    
+            <input class="list_input" type="text" />
+            <button class="add_btn">Add</button><br>
+            <script src="dom.js"></script>
+        </figure>
+
+        <p>Using the <b>addEventListener</b> method, we are defining an action that needs to be reflected once the <b>'Add'</b> button has been clicked. Within this method, I have defined a function that will create a new list entry, which will require a user input. This input value will then be added into an existing list. I have done so using the <b>createElement</b>, <b>createTextNode</b> and <b>appendChild</b> methods. To identify that the list has been modified, the styling of the list has been altered using JavaScript with the  <b>style</b> method. As a form of data validation, I have used a RegExp expression to define a list of permitted characters and used the <b>value.match()</b> method to perform the validation.</p>
+
+        <!-- JS Forms description -->
+        <h3><u>Forms</u></h3>
+        <p>Forms are used to allows users to submit information over the web. They can be created using HTML (as seen in the HTML Page) and their elements are part of the page's DOM. The DOM elements representing the form input fields support a number of properties. To use these properties, we can use JavaScript programs. The main use of JavaScript when it involves forms is, Data Validation. It is important that users provide information that is valid and matches the data types defined in the storage database schemas. Using the following form as an example, we can demonstrate the implementation of data validation using JavaScript.</p>
+        
+        <!-- Creating figure box to store code for Form example -->
+        <figure class="codebox">
+            <figcaption>JavaScript Code:</figcaption>
+            <pre><code>
+                const fname = document.querySelector("#fname");
+                const lname = document.querySelector("#lname");
+                const email = document.querySelector("#email");
+                const submitBtn = document.querySelector(".submit_btn");
+
+                submitBtn.addEventListener("click", function() {
+                    if (fname.value == "") {
+                    alert("Please enter a first name.");
+                    return false;
+                    }
+
+                    var letters = /^[A-za-z]+$/;
+
+                    if (!fname.value.match(letters)){
+                        alert("Please enter letters only.");
+                        fname.value = "";
+                        return false;
+                    }
+
+                    if (lname.value == "") {
+                        alert("Please enter a last name.");
+                        return false;
+                    }
+                    
+                    var letters = /^[A-za-z]+$/;
+
+                    if (!lname.value.match(letters)){
+                        alert("Please enter letters only.");
+                        lname.value = "";
+                        return false;
+                    }
+
+                    if (email.value == "") {
+                    alert("Please enter an email.");
+                    return false;
+                    }
+                 });
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store output for DOM example -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <form class="css_form">
+                <fieldset>
+                 <legend>Sign-Up Form:</legend><br>
+                 <label for="fname">First name:</label><br>
+                 <input type="text" id="fname" name="fname"><br><br>
+                 <label for="lname">Last name:</label><br>
+                 <input type="text" id="lname" name="lname"><br><br>
+                 <label for="email">Email:</label><br>
+                 <input type="email" id="email" name="email"><br>
+                 <br><label for="favSport">Favourite Sport:</label><br>
+                 <select id="favSport">
+                    <option value="-1">Soccer</option>
+                    <option value="1">Cricket</option>
+                    <option value="2">Basketball</option>
+                 </select>
+                 <br>
+                 <br><input type="radio" id="male" name="gender" value="male">
+                 <label for="male">Male</label>
+                 <input type="radio" id="female" name="gender" value="female">
+                 <label for="female">Female</label><br>
+                 <br><input class = "submit_btn" type="submit" value="Submit">                 
+                </fieldset>
+            </form>    
+        </figure>
+    <script src="forms.js"></script>
+    
+    <!-- AJAX description -->
+    <h3><u>AJAX</u></h3>
+    <p>Short for Asynchronous JavaScript and XML, AJAX is a collection of web development technique that works on the client-side to create Asynchronous web applications. AJAX allows the requesting and receiving of data from a server (background process) to change a webpage's content dynamically, without the need for refreshing the webpage itself. This is achieved by separating the data interchange layer from the presentation layer. Modern implementations of AJAX utilitises the JSON data format, rather than the older Extensible Markup Language (XML). HTML and CSS are used together with AJAX in order to display and style the information. The following implementation of AJAX uses HTML, CSS, JavaScript and JQuery, and is a demonstration of how constantly updating data (JSON data) can be used to display the latest information from the current COVID-19 pandemic.</p>
+
+    <!-- Creating figure box to store code for AJAX example -->
+    <figure class="codebox">
+        <figcaption>HTML Code:</figcaption>
+        <pre><code>
+                &lt;button id=&quot;button&quot;&gt;Fetch COVID-19 Information&lt;/button&gt;
+
+                &lt;div id=&quot;covid-info&quot;&gt;&lt;/div&gt; 
+
+                &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+                &lt;script src=&quot;ajax.js&quot;&gt;&lt;/script&gt;
+        </code></pre>
+    </figure>
+
+    <figure class="codebox">
+        <figcaption>JavaScript Code:</figcaption>
+        <pre><code>
+                var button = document.getElementById("button");
+                var covidInfo = document.getElementById("covid-info");
+                var buttonCount = 0;
+
+                button.addEventListener("click", function(){
+                    $.ajax({
+                        url: 'https://coronavirus-tracker-api.herokuapp.com/v2/locations',
+                        type: 'GET',
+                        crossDomain: true,
+                        dataType: 'json',
+                        success: function(data) {
+                            console.log(data);
+                            renderHTML(data);
+                            buttonCount++;
+                            if (buttonCount = 1){
+                                button.classList.add("hide-me");
+                            }
+                        }
+                    })
+                });
+
+                function renderHTML(data){
+                    var htmlString = "";
+
+                    var act_confirmed = data.locations[8].latest.confirmed;
+
+                    var act_deaths = data.locations[8].latest.deaths;
+
+                    var nsw_confirmed = data.locations[9].latest.confirmed;
+  
+                    var nsw_deaths = data.locations[9].latest.deaths;
+
+                    var nt_confirmed = data.locations[10].latest.confirmed;
+
+                    var nt_deaths = data.locations[10].latest.deaths;
+
+                    var qld_confirmed = data.locations[11].latest.confirmed;
+
+                    var qld_deaths = data.locations[11].latest.deaths;
+
+                    var sa_confirmed = data.locations[12].latest.confirmed;
+
+                    var sa_deaths = data.locations[12].latest.deaths;
+
+                    var tas_confirmed = data.locations[13].latest.confirmed;
+
+                    var tas_deaths = data.locations[13].latest.deaths;
+
+                    var vic_confirmed = data.locations[14].latest.confirmed;
+
+                    var vic_deaths = data.locations[14].latest.deaths;
+
+                    var wa_confirmed = data.locations[15].latest.confirmed;
+
+                    var wa_deaths = data.locations[15].latest.deaths;
+
+                    var aus_confirmed_total = act_confirmed + nsw_confirmed + nt_confirmed +
+                    qld_confirmed + sa_confirmed + tas_confirmed + vic_confirmed + wa_confirmed;
+
+                    var aus_deaths_total = act_deaths + nsw_deaths + nt_deaths + qld_deaths + sa_deaths + tas_deaths + vic_deaths + wa_deaths;
+
+                    htmlString += &lt;"p"&gt; + "The number of confirmed reported cases are "+  data.latest.confirmed + "."
+
+                    htmlString += &lt;"p"&gt; + "The number of deaths that have been reported has risen to " + data.latest.deaths + "."
+
+                    htmlString += &lt;"p"&gt; + "Total number of confirmed cases in Australia is " + aus_confirmed_total + ".";
+  
+                    htmlString += &lt;"p"&gt; + "Total number of deaths in Australia is " + aus_deaths_total + ".";
+
+                    covidInfo.insertAdjacentHTML('beforeend',htmlString);
+                }
+        </code></pre>
+    </figure>
+
+    <figure class="codebox">
+        <figcaption>CSS Code:</figcaption>
+        <pre><code>
+                #button
+                {
+                    background-color: rgb(74, 190, 77);
+                    border: none;
+                    border-radius: 4px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 15px;
+                    color: white;
+                    padding: 16px 32px;
+                    text-decoration: none;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+                }
+
+                .hide-me {
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: scale(.75);
+                }
+        </code></pre>
+    </figure>
+    
+    <!-- Creating figure box to store output for AJAX example -->
+    <figure class="codebox">
+        <figcaption>Output:</figcaption>
+        <br>
+        <div id="covid-info"></div> 
+        <button id="button">Fetch Latest COVID-19 Information</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="ajax.js"></script>
+    </figure>
+    </body>
+</html>

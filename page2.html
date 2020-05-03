@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+    <head>
+        <meta charset="UTF-8">
+        
+        <!-- Specify title for Page 2 - CSS -->
+        <title>CSS Page</title>
+
+        <!-- Link the CSS Stylesheet -->
+        <link rel="stylesheet" href="style.css"/>
+        
+        <!-- Internal CSS code used for CSS Levels example (Internal CSS) -->
+        <style>
+            /* Styling paragraph with id="styled_para" */
+            #styled_para {
+                color: black;
+                border: 2px solid #AC3B61;
+                background-color: #AC3B61;
+                border-radius: 5px;
+                width: 50%;
+                padding: 10px;
+            }
+
+            /* Styling parapragh with id="cascading_para" */
+            #cascading_para {
+                color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Create the top navigation bar for the page --> 
+        <div class="topnav">
+            <!-- //Link HTML page and title the first tab  -->
+            <a href="page1.html">HTML</a>
+            <!-- //Link CSS page and title the second tab -->
+            <a class="active" href="page2.html">CSS</a>
+            <!-- Link JS page and title the third tab -->
+            <a href="page3.html">JavaScript</a>
+            <!-- Link Bio page and title the last tab -->
+            <a href="page4.html">Author</a>
+        </div>
+
+        <!-- Heading for the title of the page -->
+        <h1>Cascading Style Sheets (CSS)</h1>
+
+        <!--CSS Introduction-->
+        <h2>History and Evolution of CSS</h2>
+
+        <p>Cascading Style Sheets (CSS) is  one of two core technologies in web development, the other being HTML. CSS is a style sheet language that is used to style the aesthetics and layout of a web page. CSS allows the presentation of a web page to adapt to various media types such as desktops, mobile devices and prints. The language was first proposed by Hakon Wium Lie in 1994 to complement the initial version of HTML, developed by his colleague, Tim Berners-Lee. In 1996, computer scientist Bert Bos join the World Web Consortium (W3C) to work on CSS, and is regarded as the co-creator of CSS, along with Hakom Wium Lie. </p>
+        
+        <!-- CSS 1 description -->
+        <h3><u>CSS 1 (1996)</u></h3>
+
+        <p>This was the first specification of CSS that became an official recommendation of the W3C. This version of CSS supported the following:</p>
+        <ul> 
+            <li>Font properties</li>
+            <li> Text and background colours</li>
+            <li>Text attributes</li>
+            <li>Element alignment, margin, border and padding attributes</li>
+            <li>Unique identification and attribute group classifications.</li>
+        </ul>
+
+        <!-- CSS 2 description -->
+        <h3><u>CSS 2 (1998)</u></h3>
+
+        <p>This specification of CSS was developed and published by the W3C. It was an enhancement of CSS1 and included notable new capabilities such as:</p>
+        <ul>
+            <li>Positioning of elements - Absolute, Relative and Fixed</li>
+            <li>Support for different media types - Aural, Braille, Handheld etc.</li>
+            <li>Wider range of selectors</li>
+            <li>New pseudoclasses and pseudoelements</li>
+        </ul>
+
+        <!-- CSS 3 description -->
+        <h3><u>CSS 3 (1999)</u></h3>
+
+        <p>Unlike previous versions of CSS which were based on large single specifications, CSS3 was divided into multiple "modules", with each module extending features or adding new capabilities to previously defined features. Due to modularisation, different modules have varying stability and statuses (Working Drafts/Candidate Recommendation/Recommendation). CSS3 modules are still being updated, with the 'Selectors Module 3' recently becoming a 'Recommendation' in November, 2018. Some important features released in CSS3:</p>
+        <ul>
+            <li>Support for web fonts</li>
+            <li>Support for 2D/3D animations and transitions (without Flash/JavaScript)</li>
+            <li>Support for RGBA, HSLA, HSL and Gradient colours</li>
+        </ul>
+
+        <p>Notable CSS3 Modules:</p>
+        <ul>
+            <li>Media Queries</li>
+            <li>CSS Fonts Module Level 3</li>
+            <li>CSS Color Module Level 3</li>
+        </ul>
+
+        <p>Formally recommended in 2012, the 'Media Queries' module is considered as one of the most revolutionary modules from the CSS3 release and is responsible for the responsive designs of modern day web pages.This module analyses the capabilities of mobile devices used and defines tailored style sheets for the various devices (laptops, mobile phones, smartwatches etc.) we use in the modern world.</p>
+
+        <!-- CSS Levels description -->
+        <h2> Levels of CSS</h2>
+        
+        <p>When styling a webpage using CSS, there are 5 important levels that a web developer should consider. Listed in  descending order of cascading priority, they are :</p>
+        <ol>
+            <li>User-defined styling </li>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+            <li>Browser-default styling</li>
+        </ol>
+
+        <p> User-defined style sheets are mainly used by users who require added accessibility, and write their own CSS to customise and override a web page's default style. On the other hand, browser-default styles are the different rendering styles of a particular browser. Each browser may have different styling properties for each HTML element. For example, the default styling for Microsoft Edge's and Google Chrome's &lt;figcaption&gt; is compared below: </p>
+
+        <!-- Creating figure box to store Microsoft Edge Styling code -->
+        <figure class="codebox">
+            <figcaption>Microsoft Edge Styling for &lt;figure&gt;:</figcaption>
+            <pre><code>
+                figure {
+                    display: block;
+                    margin: 0.5em 40px;
+                    unicode-bidi: embed;
+                } 
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to Google Chrome (Webkit) code -->
+        <figure class="codebox">
+            <figcaption>Google Chrome (Webkit) Styling for &lt;figure&gt;:</figcaption>
+            <pre><code>
+                figure {
+                    display: block;
+                    -webkit-margin-before: 1em;
+                    -webkit-margin-after: 1em;
+                    -webkit-margin-start: 40px;
+                    -webkit-margin-end: 40px;
+                } 
+            </code></pre>
+        </figure>
+
+        <p> In this example, we can see that the margins for the <b>&lt;figure&gt;</b> element between these two browers are slightly different (Edge: 0.5em and Chrome: 1em).</p>
+            
+        <p>As web developers, we are able to control the styling of webpages through the use of <b>Inline, Internal and External CSS</b>. Using the following example, the cascading priority of these CSS implementations will be demonstrated.</p>
+
+        <!-- Creating figure box to store Cascading Priority demonstration code -->
+        <figure class="codebox">
+            <figcaption>Cascading priority of Inline, Internal and External CSS:</figcaption>
+            <pre><code>
+                <b>/* Inline CSS code */</b>
+
+                     &lt;p id=&quot;cascading_para&quot; style=&quot;color:orange&quot;&gt;This text will either be &lt;b&gt;ORANGE, RED OR BLUE&lt;/b&gt; in colour.&lt;/p&gt;
+
+                <b>/* Internal CSS code */</b>
+
+                     &lt;style&gt;
+                         #cascading_para {
+                         color: blue;
+                         }
+                     &lt;/style&gt;
+
+                <b>/* External CSS code */</b>
+
+                     #cascading_para 
+                     {
+                          color: red;
+                     }
+            </code></pre>
+        </figure>
+        
+        <!-- Creating figure box to store Cascading Priority demonstration code -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+                <p id="cascading_para" style="color:orange">This text will either be <b>ORANGE, RED OR BLUE</b> in colour.</p>
+        </figure>
+
+        <p>From the example, we can see that although the colour of the text was defined with Inline, Internal and External CSS, the output text was rendered in orange, as Inline CSS has the highest cascading priority. These 3 implementations of CSS are discussed and demonstrated below.</p>
+
+        <!-- Inline CSS description -->
+        <h3><u>Inline CSS</u></h3>
+        <p>Inline CSS is mostly used to apply styles to an individual HTML element. As its name suggests, this can be done by adding <b>style attributes</b> within the desired HTML tag. For example, by using inline CSS, we can style the contents of the following <b>&lt;p&gt;</b> tag:</p>
+
+        <!-- Creating figure box to store inline css  code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;p style=&quot;color:yellow&quot;;&gt;This text will be yellow in colour.&lt;/p&gt; 
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store inline css output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+                <p style="color:yellow;">This text will be yellow in colour.</p> 
+        </figure>
+       
+        <p>Inline CSS is seen as an inefficient method of styling as it requires each element to be styled individually. This affects the structure and readability of the code as well as decreasing the webpage's performance.</p>
+
+        <!-- Internal CSS description -->
+        <h3><u>Internal CSS</u></h3>
+        <p>Internal CSS can be used for styling single webpages. This can be done by embedding CSS code in the <b>&lt;style&gt;</b> tag, after the <b>&lt;head&gt;</b> tag in the HTML file documentation.</p>
+
+        <p>An example of Internal CSS implementation is shown below:</p>
+
+        <!-- Creating figure box to store internal css code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;style&gt;
+                #styled_para {
+                    color: black;
+                    border: 2px solid #AC3B61;
+                    background-color: #AC3B61;
+                    border-radius: 5px;
+                    width: 50%;
+                    padding: 10px;
+                 }
+                &lt;/style&gt; 
+                &lt;/head&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store internal css output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+                <p id="styled_para">This is a styled paragraph.</p>
+        </figure>
+
+        <p>By implementing Internal CSS, all the code for the webpage and its styling can be found within a single HTML document. However, this can result in cluttering the document and also negatively affects the pages' loading time.</p>
+
+        <!-- External CSS description -->
+        <h3><u>External CSS</u></h3>
+        <p>An external stylesheet is a separate file that contains only CSS code and makes use of the <b>.css</b> extension. External stylesheets are useful for achieving a uniform and global design to all pages to a webpage and are referenced to the HTML document in the <b>&lt;head&gt;</b> tag, as shown below. </p>
+
+        <!-- Creating figure box to store external css link -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;/&gt;
+            </code></pre>
+        </figure>
+
+        <p> Using an external CSS stylesheet is considered as the best approach when developing multiple webpages, as it provides cleaner document structure since all HTML and CSS codes are stored in separate documents. All changes in styling can be reflected across all linked webpages by editing just the '.css' file.</p>
+
+        <p>Provided below is a block of code from my external stylesheet used for this webpage.</p>
+        
+        <!-- Creating figure box to store external css  code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                body
+                {
+                    background-color:#1F2833;
+                    color: #BAB2B5;
+                    font-family: 'Duru Sans', sans-serif;
+                    margin-left: 5px;
+                }
+
+                h1
+                {
+                    font-family:'Montserrat', sans-serif;
+                    color: #66FCF1;
+                }
+
+                h2
+                {
+                    font-family:'Montserrat', sans-serif;
+                    color: #45A29E;
+                }
+
+                h3
+                {
+                    color: #AC3B61;
+                }
+                
+                p
+                {
+                    padding-left: 10px;
+                    margin-right: 150px;
+                }
+            </code></pre>
+        </figure>
+
+        <!-- CSS Purpose and Benefits description -->
+        <h2> Purpose and Benefits of CSS</h2>
+
+        <p>Apart from visual enhancements, there are many significant reasons to justify the use of CSS in web pages. Below are some of the benefits of using CSS.</p>
+
+        <!-- Consistency in design description -->
+        <h3><u>Consistency In Design</u></h3>
+        <p>Design consistency is one of the most important considerations in web development. The layout of a website should be consistent across all its pages as it reflects on the overall outlook of the website. Using CSS allows the design for a particular element to be repeated within a page and even across multiple pages. This also smoothens the maintenance of the website, as styles only need to be edited once in order to be reflected throughout the entire website, saving the developer a lot of time.</p>
+
+        <!-- Increased web page performance description -->
+        <h3><u>Increased Web Page Performance</u></h3>
+        <p>Storing all CSS code on an external sheet, results in a lightweight HTML document which in turn helps reduce download times.Through the implementation of CSS, the code is generally cached in the browser and does not need to be downloaded again to load the other pages, reducing the network bandwidth usage.</p>
+
+        <!-- Search engine optimisation description -->
+        <h3><u>Search Engine Optimisation</u></h3>
+        <p>As mentioned above, the implementation of CSS results in a lightweight HTML document as it contains less code. This simpler structure improves readability not only for the developer, but also for search engine algorithms. A lightweight documents allows for algorithms to search through the code at a much quicker rate. That being said, it is more likely for a lightweight webpage to rank higher in search results. </p>
+
+        <!-- CSS Selectors decription -->
+        <h2> CSS Selectors</h2>
+        <p>CSS Selectors are used to define the HTML elements to which a set of CSS rules apply.They can categorised into the following groups:</p>
+        <ul>
+            <li>Simple - <i>selects elements based on element name, id and class etc.</i></li>
+            <li>Combinator - <i>selects elements based on relationships (descendent, child, sibling etc.)</i></li>
+            <li>Pseudo-class - <i>selects elements by state</i></li>
+            <li>Pseudo-elements - <i>selects elements by specific parts of elements</i></li>
+            <li>Attribute - <i>Selects elements based on attribute or attribute value</i></li>
+        </ul>
+
+        <p>Examples of each CSS Selector category is shown below.</p>
+
+        <!-- Simple Selectors description -->
+        <h3><u>Simple Selectors</u></h3>
+        <p>These are the most basic CSS selectors, and are used to select HTML elements for defining styles. This group of CSS selectors comprises of the following:</p>
+        <ul>
+            <li>Element Selector</li>
+            <li>ID Selector</li>
+            <li>Class Selector</li>
+            <li>Universal Selector</li>
+            <li>Grouping Selector</li>
+        </ul>
+        <p>The following section will  describe and define each of these Simple Selectors.</p>
+
+        <!-- Element Selectors description -->
+        <h4><u>Element Selector</u></h4>
+        <p>This form of selector is used to select HTML elements based on their respective element names. </p>
+        
+        <!-- Creating figure box to store element selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                h1
+                {
+                    font-family:'Montserrat', sans-serif;
+                    color: #66FCF1;
+                    margin-left: 5px;
+                }
+
+                h2
+                {
+                    font-family:'Montserrat', sans-serif;
+                    color: #45A29E;
+                    margin-left: 5px;
+                }
+
+                h3
+                {
+                    color: #AC3B61;
+                    margin-left: 5px;
+                }
+
+                h4
+                {
+                    margin-left: 5px;
+                    margin-right: 150px;
+                }
+
+                p
+                {
+                    margin-left: 5px;
+                    margin-right: 400px;
+                    color: #BAB2B5;
+                }
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store element selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+                <h1>Sample Heading 1</h1>
+                <h2>Sample Heading 2</h2>
+                <h3>Sample Heading 3</h3>
+                <p>This is a sample paragraph.</p>
+        </figure>
+
+        <!-- ID Selector description -->
+        <h4><u>ID Selector</u></h4>
+        <p>The ID Selector uses the ID attribute of HTML elements to select the respective element. ID's for elements can be referenced in CSS using the <b>'#'</b> character followed by the elements ID. <br>An example of this implementation is shown below. </p>
+
+        <!-- Creating figure box to store id selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                #para2
+                    {
+                        color: rgb(44, 241, 44);
+                    }
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store id selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p id="para2">Sample paragraph using an ID Selector.</p>
+        </figure>
+
+        <!-- Class Selectors description -->
+        <h4><u>Class Selector</u></h4>
+        <p>CSS Class Selectors make use of an element's class attribute for selection. To reference an element's class in CSS, the <b>'.'</b> (fullstop) is followed by the class name. The following example implements a class selector.</p>
+
+        <!-- Creating figure box to store class selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .class_selector
+                {
+                    color: red;
+                }    
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store class selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p class="class_selector">Sample paragraph using a Class Selector.</p>
+        </figure>
+
+        <!-- Universal Selectors description -->
+        <h4><u>Universal Selector</u></h4>
+        <p>The CSS Universal Selector is used when selecting all HTML elements on a page. In order to demonstrate the use of this selector without affecting the styling of this page, I have used the class selector and universal selector together, as shown below.</p>
+
+        <!-- Creating figure box to store universal selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .universal_selector *
+                {
+                    text-align: center;
+                }
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store universal selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="universal_selector">
+                <h1>Sample Heading 1</h1>
+                <h2>Sample Heading 2</h2>
+                <h3>Sample Heading 3</h3>
+            </div>
+        </figure>
+
+        <!-- Grouping Selectors description -->
+        <h4><u>Grouping Selector</u></h4>
+        <p>Grouping Selectors are useful when selecting multiple HTML elements with the same style definitions. The following example combines the use of class selectors and grouping selectors to preserve the styling of the webpage.</p>
+        
+        <!-- Creating figure box to store grouping selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .grouping_selector h1,
+                .grouping_selector h2,
+                .grouping_selector h3
+                {
+                     text-align: center;
+                }
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store grouping selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="grouping_selector">
+                <h1>Sample Heading 1</h1>
+                <h2>Sample Heading 2</h2>
+                <h3>Sample Heading 3</h3>
+            </div>
+        </figure>
+
+        <!-- Combinator Selectors description -->
+        <h3><u>Combinator Selectors</u></h3>
+        <p>Some notable Combinator Selectors are described and demonstarted below.</p>
+
+        <!-- Descendent Selector description -->
+        <h4><u>Descendent Selector</u></h4>
+        <p>The descendent selector is used to match only  all descending elements of a specified element. In the following example, the first and subsequent <b>&lt;p&gt;</b> tags are styled, with the 'Sample heading' <br>(<b>&lt;h4&gt;</b> tag) left unstyled.  </p>
+
+        <!-- Creating figure box to store descendent selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .descendent_selector p
+                {
+                    background-color:  rgb(44, 241, 44);
+                    border-radius: 3px;
+                    width: 40%;
+                    color: black;
+                } 
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store descendent selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="descendent_selector">
+                <p>Sample Paragraph 1</p>
+                <p>Sample Paragraph 2</p>
+                <p>Sample Paragraph 3</p>
+                <h4>Sample heading</h4>
+            </div>
+        </figure>
+
+        <!-- Child Selector description -->
+        <h4><u>Child Selector (>)</u></h4>
+        <p>The child selector is used to select all elements that have a child relationship with the specified element. As in the example below, all elements of <b>&lt;div class="child_selector"&gt;</b> will be styled, except for <b>'Sample Paragraph 4'</b> as it is not part of the abovementioned &lt;div&gt; </p>
+       
+       <!-- Creating figure box to store child selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .child_selector > p
+                {
+                    background-color:  orange;
+                    border-radius: 3px;
+                    width: 40%;
+                    color: black;
+                } 
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store child selectors code -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="child_selector">
+                <p>Sample Paragraph 1</p>
+                <p>Sample Paragraph 2</p>
+                <p>Sample Paragraph 3</p>
+            </div>
+            <p>Sample Paragraph 4</p>
+        </figure>
+
+        <!-- Adjacent Sibling Selector description -->
+        <h4><u>Adjacent Sibling Selector (+)</u></h4>
+        <p>This selector is used to select all elements that are adjacement siblings of the specified element. In the example below, <b>Sample Paragraph 1</b> and <b>Sample Paragraph 2</b> are elements of a <b>&lt;div class="adj_sibling_selector"&gt;</b>. <b>Sample Paragraph 3</b> and <b>Sample Paragraph 4</b> are not part of the above mentioned &lt;div&gt;. As defined using an Adjacent Sibling Selector, only the third paragraph will be styled as it is the only adjacent sibling to the &lt;div&gt;. This is demonstrated below. </p>
+
+        <!-- Creating figure box to store adjacent sibling selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .adj_sibling_selector + p
+                {
+                    background-color:  lightblue;
+                    border-radius: 3px;
+                    width: 40%;
+                    color: black;
+                } 
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store adjacent sibling selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="adj_sibling_selector">
+                <p>Sample Paragraph 1</p>
+                <p>Sample Paragraph 2</p>
+            </div>
+            <p>Sample Paragraph 3</p>
+            <p>Sample Paragraph 4</p>
+        </figure>
+
+        <!-- General Sibling Selector description -->
+        <h4><u>General Sibling Selector (~)</u></h4>
+        <p>The General Sibling Selector is used to select all sibling elements of the specfied element. Using the exact scenario from the Adjacent Sibling Selector example, <b>Sample Paragraph 3</b> and <br><b>Sample Paragraph 4</b> will both be styled in this case. This is because these two <b>&lt;p&gt;</b> elements are general siblings of the specified instance of <b>&lt;div&gt;</b>.</p>
+
+        <!-- Creating figure box to store general sibling selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .gen_sibling_selector ~ p
+                {
+                    background-color:  pink;
+                    border-radius: 3px;
+                    width: 40%;
+                    color: black;
+                } 
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store general sibling selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="gen_sibling_selector">
+                <p>Sample Paragraph 1</p>
+                <p>Sample Paragraph 2</p>
+            </div>
+            <p>Sample Paragraph 3</p>
+            <p>Sample Paragraph 4</p>
+        </figure>
+
+        <!-- Pseudo-class Selectors description -->
+        <h3><u>Pseudo-class Selectors</u></h3>
+        <p>This selector is commonly used to specify the styling set of a selected element in a particular state. One of the most common applications of pseudo-class selectors is the <b>':hover'</b> psuedo-class. <br>When the mouse is hovered over each of the table's data cells (not including table header and footer), the background of that particular cell changes colour. Another pseudoclass that can be implemented within a table is the <b>':nth-child(n)'</b> pseudo-class. This pseudo-class has been used to style the table below, and specifies the background-color attribute of alternate rows. <br>Demostrations of both the above mentioned pseudo-classes are given below.</p>
+
+        <!-- Creating figure box to store pseudo-class selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .styled_table td:hover 
+                {
+                    background-color: green;
+
+                }
+
+                .styled_table tr:nth-child(even)
+                {
+                    background-color: #BAB2B5;
+                    color: black;
+                }
+
+                .styled_table tr:nth-child(odd)
+                {
+                    background-color: rgb(89, 139, 137);
+                    color: black;
+                }       
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store pseudo-class selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <table class="styled_table">
+                <caption>INVENTORY</caption>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>$1000</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>$600</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Camera</td>
+                    <td>$400</td>
+                    <td>15</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Total</th>
+                        <td>85</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </figure>
+
+        <!-- Pseudo-element Selectors -->
+        <h3><u>Pseudo-element Selectors</u></h3>
+        <p>Psuedo-element Selectors are used when styling specific parts of an element. There are six types of pseudo-elements and they are:</p>
+        <ul>
+            <li>::after - <i>inserts content after each element</i></li>
+            <li>::before - <i>inserts content before each element </i></li>
+            <li>::first-letter - selects the first letter of each element</li>
+            <li>::first-line - selects the first line of each element</li>
+            <li>::selection - selects the portion of an element that is highlighted by the user.</li>
+        </ul>
+
+        <p>The above mentioned pseudo-elements have been implemented in the following example.</p>
+
+        <!-- Creating figure box to store psuedo-element selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .pseudo_element p::first-letter
+                {
+                    color: #AC3B61;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .pseudo_element::first-line
+                {
+                    font-size: 20px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                .pseudo_element p::selection
+                {
+                    color: white;
+                    background-color: red;
+                }
+
+                .pseudo_element::after 
+                {
+                    content: "IMPORTANT";
+                    color: white;
+                    background-color: red;
+                }       
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store pseudo-element selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <div class="pseudo_element">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+            </div>
+        </figure>
+
+        <!-- Attribute Selectors description -->
+        <h3><u>Attribute Selectors</u></h3>
+        <p>[attribute] selectors are used to specify styling rules for selected elements with specified attributes. Attribute selectors also include the [attribute="value"] selector, which is used for elements with specified attributes and values. Using the code below, we will alter the style of a 'submit' button using the Attribute selector. To use this selector, I have first referenced the class of my input button, in this case (<b>.inp</b>), and then we access the attribute of this <b>&lt;input&gt;</b> button using the square brackets ( [ ] ) to declare the type of the <b>&lt;input&gt;</b> (<b>type = submit</b>).</p>
+
+        <!-- Creating figure box to store attribute selectors code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                .inp[type=submit]
+                {
+                    background-color: rgb(74, 190, 77);
+                    border: none;
+                    font-family: 'Montserrat'
+                    sans-serif;
+                    font-size: 15px;
+                    color: white;
+                    padding: 16px 32px;
+                    text-decoration: none;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                }
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store attribute selectors output -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <input class="inp" type="submit" value="Submit">
+        </figure>
+    </body>
+</html>

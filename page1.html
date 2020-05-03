@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    
+    <head>
+        <meta charset="UTF-8">
+        
+        <!-- Specify the title for Page 1 - HTML -->
+        <title>HTML Page</title>
+
+        <!-- Link the CSS Stylesheet -->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+        <!-- Create the top navigation bar for the page -->
+        <div class="topnav">
+            <!-- //Link HTML page and title the first tab  -->
+            <a class="active" href="page1.html">HTML</a>
+            <!-- //Link CSS page and title the second tab -->
+            <a href="page2.html">CSS</a>
+            <!-- Link JS page and title the third tab -->
+            <a href="page3.html">JavaScript</a>
+            <!-- Link Bio page and title the last tab -->
+            <a href="page4.html">Author</a>
+        </div>
+
+        <!-- Heading for title of the page -->
+        <h1>Hyper Text Markup Language (HTML)</h1>
+
+        <!--HTML Introduction-->
+        <h2> History and Evolution of HTML</h2>
+
+        <p>Hypertext Markup Language (HTML) is the standard markup language used for creating web applications and pages. Tim Berners-Lee initially developed HTML to solve his problem of having to switch between different computers in order to access different pieces of information at his workplace, the CERN labs. The concept of this system was the beginning of the world wide web’s fundamental language. The evolution of the HTML language is discussed below. </p>
+
+        <!-- HTML 1 description-->
+        <h3><u>HTML 1 (1993)</u></h3> 
+
+        <p>The first version of HTML was mainly developed for users to share information on the web. Webpages developed at the time were static and heavily text-based as HTML did not support any forms of styling (fonts, backgrounds, images). The most notable tags in this version are:</p>
+        <ul>
+            <li><b> Anchor</b> &lt;a&gt;</li>
+            <li><b> Title</b> &lt;title&gt;</li>
+            <li><b> Lists</b> &lt;ul&gt;, &lt;ol&gt;,&lt;dl&gt; and &lt;li&gt;</li>  
+            <li><b> Headings</b>  &lt;h1&gt;...&lt;h6&gt;</li>
+        </ul>
+    
+        
+        <!--HTML 2 description-->
+        <h3><u>HTML 2 (1995)</u></h3>
+
+         <p> This was the first official standard of HTML and was published in 1995. HTML 2 supported  more browsers and contained all of the features from HTML1, along with some additional tags. Of note, the following tags were introduced in HTML 2:</p>
+         <ul>
+            <li><b> DocType</b> &lt;!doctype&gt;</li>
+            <li><b> Forms</b> &lt;form&gt;</li>
+            <li><b> Tables</b> &lt;table&gt; </li>  
+            <li><b> Body</b> &lt;body&gt;</li>
+            <li><b> Text Semantics</b> &lt;strong&gt;</li>
+            <li><b> Images</b> &lt;img&gt;</li>
+        </ul>
+
+        <!--HTML 3.2 description-->
+
+        <h3><u>HTML 3.2 (1997)</u></h3>
+
+         <p>At this stage, HTML gained strong following with growing demand for newer tags and capabilities. HTML 3.0 was a relatively massive improvement compared to previous versions, implementing many features. Most browsers were unable to keep up with the size of the overhaul and the version was discarded. Through the intervention of the World Wide Web Consortium (W3C), a lower-specification but standardised language was developed and subsequently rolled out, as HTML 3.2. In this version, the most notable tags were:</p>
+        <ul>
+            <li><b> Styles</b> &lt;style&gt;</li>
+            <li><b> Fonts</b> &lt;font&gt;</li>
+        </ul>
+
+        <!--HTML 4.0 description-->
+        <h3><u>HTML 4.0 (1999)</u></h3>
+
+         <p>This version of HTML provided support for the use of external style sheets (CSS), offering more dynamic presentation mechanisms. As a result, the W3 Consortium eventually phased out many of HTML’s presentation elements. Most notably, HTML 4 introduced:</p>
+         <ul>
+            <li><b> Buttons</b> &lt;button&gt;</li>
+            <li><b> Field Sets</b> &lt;fieldset&gt;</li>
+            <li><b> Object</b> &lt;object&gt;</li>
+        </ul>
+
+        <!--HTML 5 description-->
+        <h3><u>HTML 5 (2014)</u></h3>
+
+        <p>This is the latest version of HTML and in this update, the language offers a variety of new features such as:</p>
+        <ul>
+            <li><b> Navigation</b> &lt;nav&gt;</li>
+            <li><b> Sections</b> &lt;section&gt;</li>
+            <li><b> Meter </b> &lt;meter&gt;</li>
+            <li><b> Headers</b> &lt;header&gt; and <b>Footers</b> &lt;footer&gt; </li> 
+        </ul>
+
+        <p>These tags help structure content more efficiently and allows for better search engine results. This version also provided support for multimedia elements using the Audio <b>&lt;audio&gt;</b> and Video <b> &lt;video&gt;</b> tags. HTML 5 also allowed the development of more dynamic and interactive websites without the need of extra software/plugins. By limiting the need for external plugins, content could be delivered much faster compared to previous HTML versions. </p>
+
+        <!--Descriptions and Code/Output for  HTML Elements-->
+        <h1>HTML Elements</h1>
+
+        <!-- HTML Lists description-->
+        <h2>Lists</h2>
+
+        <p>HTML lists can be used to present information in 3 different ways, they are:</p>
+        <ul>
+            <li>Unordered list - A list of items presented in no particular order (marked as bullet points).</li>
+            <li>Ordered list - A list of items, in a numbered order.</li>
+            <li>Description list - A list of terms and their specific descriptions.</li>
+        </ul>
+        
+        <!-- Unordered Lists description -->
+        <h3><u>Unordered Lists</u></h3>
+
+        <p>Unordered lists can be created using two tags, <b>&lt;ul&gt;</b> (defines an unordered list) and <b>&lt;li&gt;</b> (defines list items). The <b>&lt;ul&gt;</b> tag is declared first, before the list elements are entered between the <b>&lt;li&gt;</b> and <b>&lt;/li&gt;</b> tags. The list  is then closed with <b>&lt;/ul&gt;</b> tag. An example of an unordered list and its code is given below.</p>
+
+        <!-- Creating figure box to store unordered lists code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;p&gt; A list of some units offered at UWA:&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;CITS1001 - Software Engineering with Java&lt;/li&gt;
+                    &lt;li&gt;CITS1401 - Computational Thinking with Python&lt;/li&gt;
+                    &lt;li&gt;CITS2002 - Systems Programming&lt;/li&gt;
+                    &lt;li&gt;CITS2200 - Data Structures and Algorithms&lt;/li&gt;
+                    &lt;li&gt;CITS3401 - Data Warehousing&lt;/li&gt;
+                    &lt;li&gt;CITS3403 - Agile Web Development&lt;/li&gt;
+                &lt;/ul&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store unordered lists output-->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p>A list of units offered at UWA:</p>
+            <ul>
+                <li>CITS1001 - Software Engineering with Java</li>
+                <li>CITS1401 - Computational Thinking with Python</li>
+                <li>CITS2002 - Systems Programming</li>
+                <li>CITS2200 - Data Structures and Algorithms</li>
+                <li>CITS3401 - Data Warehousing</li>
+                <li>CITS3403 - Agile Web Development</li>
+            </ul>
+        </figure>
+
+        <!-- Ordered Lists description -->
+        <h3><u>Ordered Lists</u></h3>
+
+        <p>Ordered lists are created using the <b>&lt;ol&gt;</b> (defines an ordered list) and <b>&lt;li&gt;</b> tags. As with unordered lists, the <b>&lt;ol&gt;</b> is declared first before list elements are entered between the <b>&lt;li&gt;</b> and <b>&lt;/li&gt;</b> tags.<br>The list is then closed with the <b>&lt;/ol&gt;</b> tag. An example of an ordered list and its code is given below.</p>
+
+        <!-- Creating figure box to store ordered lists code -->
+        <figure class="codebox"> 
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;p&gt; Versions of HTML: &lt;/p&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;HTML 1.0&lt;/li&gt;
+                    &lt;li&gt;HTML 2.0&lt;/li&gt;
+                    &lt;li&gt;HTML 3.0&lt;/li&gt;
+                    &lt;li&gt;HTML 3.2&lt;/li&gt;
+                    &lt;li&gt;HTML 4.0&lt;/li&gt;
+                    &lt;li&gt;HTML 5.0&lt;/li&gt;
+                &lt;/ol&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store ordered lists output-->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p>Versions of HTML:</p>
+            <ol>
+                <li>HTML 1.0</li>
+                <li>HTML 2.0</li>
+                <li>HTML 3.0</li>
+                <li>HTML 3.2</li>
+                <li>HTML 4.0</li>
+                <li>HTML 5.0</li>
+            </ol>
+        </figure>
+
+        <!-- Description Lists description -->
+        <h3><u>Description Lists</u></h3>
+
+        <p>Description lists can be created using three tags, <b>&lt;dl&gt;</b> (defines a description list), <b>&lt;dt&gt;</b> (definition term) and  <b>&lt;dd&gt;</b> (definition description). The <b>&lt;dl&gt;</b> tag is declared first, before list elements are entered between <b>&lt;dt&gt;</b> and <b>&lt;/dt&gt;</b> tags. The descriptions for respective list elements are entered between <b>&lt;dd&gt;</b> and <b>&lt;/dd&gt;</b> tags. The list is then closed with the <b>&lt;/dl&gt;</b> tag. An example is given below, along with its code.</p>
+
+        <!-- Creating figure box to store description lists code -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;p&gt;Common languages used to create webpages: &lt;/p&gt;
+                &lt;dl&gt;
+                    &lt;dt&gt;HTML&lt;/dt&gt;
+                    &lt;dd&gt;A language used to create webpages.&lt;/dd&gt;
+                    &lt;dt&gt;CSS&lt;/dt&gt;
+                    &lt;dd&gt;Used to format and design webpages.&lt;/dd&gt;
+                    &lt;dt&gt;Javascript&lt;/dt&gt;
+                    &lt;dd&gt;A programming language used to add dynamic and interactive elements to a webpage.&lt;/dd&gt;
+                &lt;/dl&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store description lists output-->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p>Common languages used to create webpages:</p>
+             <dl>
+                <dt>HTML</dt>
+                <dd>A language used to create webpages.</dd>
+                <dt>CSS</dt>
+                <dd>Used to format and design webpages.</dd>
+                <dt>Javascript</dt>
+                <dd>A programming language used to add dynamic and interactive elements to a webpage.</dd>
+            </dl>
+        </figure>
+
+        <!-- HTML tables description -->
+        <h2>Tables</h2>
+
+        <p>In HTML, a table can be created using the <b>&lt;table&gt;</b> tag. The <b>&lt;th&gt;</b>, <b>&lt;tr&gt;</b> and <b>&lt;td&gt;</b> tags are used to define the table's header cells, rows and cell data respectively. The <b>&lt;caption&gt;</b> tag can be used to specify the table's title (<b>'Inventory'</b> in this instance). In the following table, there are 3 <b>&lt;th&gt;</b> tags nested within the first <b>&lt;tr&gt;</b> tag to define the rows of the table (Item, Price and Quantity). <br>Following this, there are 3 <b>&lt;td&gt;</b> tags for each subsequent <b>&lt;tr&gt;</b> tag, to represent the data values in each of the cells in the remaining rows. I have also used the <b>&lt;tfoot&gt;</b> tag to group the footer content (<b>Total</b>), spanning across two columns. The complete code for the following table is given below.</p>
+
+        <!-- Creating figure box to store code for Inventory table-->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;table&gt;
+                    &lt;caption&gt;INVENTORY&lt;/caption&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Item&lt;/th&gt;
+                        &lt;th&gt;Price&lt;/th&gt;
+                        &lt;th&gt;Quantity&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Laptop&lt;/td&gt;
+                        &lt;td&gt;$1000&lt;/td&gt;
+                        &lt;td&gt;20&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Phone&lt;/dh&gt;
+                        &lt;td&gt;$600&lt;/td&gt;
+                        &lt;td&gt;50&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Camera&lt;/td&gt;
+                        &lt;td&gt;$400&lt;/td&gt;
+                        &lt;td&gt;15&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tfoot&gt;
+                        &lt;tr&gt;
+                            &lt;th id=&quot;total&quot; colspan=&quot;2&quot;&gt;Total&lt;/th&gt;
+                            &lt;td&gt;85&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                &lt;/table&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figurebox to store output for Inventory table -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <table>
+                <caption>INVENTORY</caption>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>$1000</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>$600</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Camera</td>
+                    <td>$400</td>
+                    <td>15</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <th id="total" colspan="2">Total</th>
+                        <td>85</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </figure>
+
+        <!-- HTML Forms description -->
+        <h2>Forms</h2>
+
+        <p>HTML Forms can be used to collect user data and inputs. In order to group the related fields in a sign-up form, the <b>&lt;fieldset&gt;</b> tag has been implemented in the form below. User inputs can be collected using the <b>&lt;input&gt;</b> tag via 3 different types, <b>"text"</b> (single-line text input field),<b>"radio"</b> (radio button/checklist) and <b>"submit"</b> (button for form submission). A <b>&lt;datalist&gt;</b> has been used for the 'Favourite Sport' field to allow users to choose between 3 choices, whilst also allowing them to type in other preferences. To accommodate varying lengths for addresses, a <b>&lt;textarea&gt;</b> has been used.<br>The code for the following form can be found below.</p>
+
+        <!-- Creating figure box to store code for the Form-->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;form&gt;
+                    &lt;fieldset&gt;
+                        &lt;legend&gt;Sign- Up Form:&lt;/legend&gt;&lt;br&gt;
+                        &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;
+                        &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;
+                        &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;
+                        &lt;label for=&quot;birthday&quot;&gt;Birthday:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;date&quot; id=&quot;birthday&quot; name=&quot;birthday&quot;&gt;&lt;br&gt;
+                        &lt;br&gt;&lt;label for=&quot;favSport&quot;&gt;Favourite Sport:&lt;/label&gt;&lt;br&gt;
+                        &lt;input list=&quot;favSport&quot; name=&quot;favSport&quot;&gt;
+                            &lt;datalist id=&quot;favSport&quot;&gt;
+                                &lt;option value=&quot;Soccer&quot;&gt;
+                                &lt;option value=&quot;Cricket&quot;&gt;
+                                &lt;option value=&quot;Basketball&quot;&gt;
+                            &lt;/datalist&gt;
+                        &lt;br&gt;&lt;br&gt;&lt;label for=&quot;Address&quot;&gt;Address:&lt;/label&gt;&lt;br&gt;&lt;textarea id=&quot;add&quot; rows=&quot;3&quot; cols=&quot;20&quot;&gt;Type address here. &lt;/textarea&gt;&lt;br&gt;
+                        &lt;br&gt;&lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;
+                        &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+                        &lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;
+                        &lt;label for=&quot;female&quot;&gt;Female&lt;/label&gt;&lt;br&gt;
+                        &lt;br&gt;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;                 
+                    &lt;/fieldset&gt;
+                &lt;/form&gt;
+            </code></pre>
+        </figure>
+        
+        <!-- Creating figurebox to store output for Form -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <form>
+                <fieldset>
+                 <legend>Sign- Up Form:</legend><br>
+                 <label for="fname">First name:</label><br>
+                 <input type="text" id="fname" name="fname"><br><br>
+                 <label for="lname">Last name:</label><br>
+                 <input type="text" id="lname" name="lname"><br><br>
+                 <label for="email">Email:</label><br>
+                 <input type="email" id="email" name="email"><br><br>
+                 <br><label for="favSport">Favourite Sport:</label><br>
+                 <select id="favSport">
+                   <option value="-1">Soccer</option>
+                   <option value="1">Cricket</option>
+                   <option value="2">Basketball</option>
+                 </select>
+                 <br><input type="radio" id="male" name="gender" value="male">
+                 <label for="male">Male</label>
+                 <input type="radio" id="female" name="gender" value="female">
+                 <label for="female">Female</label><br>
+                 <br><input type="submit" value="Submit">                 
+                </fieldset>
+            </form>
+        </figure>
+
+        <!-- HTML Images description -->
+        <h2>Images</h2>  
+
+        <p>Images in HTML are defined using the <b>&lt;img&gt;</b> tag. This tag has two main attributes, <b>"src"</b> (source location of the image, online or on a local system) and <b>"alt"</b> (a short text describing the image, <br>that is displayed when the image fails to load). In addition to these attributes, the image can be resized and aligned to the author's preference using the <b>"width</b> and <b>"height"</b> attributes. <br>In order to alter the positioning of the image, CSS must be used as the <b>"align</b> attribute for the <b>&lt;img&gt;</b> tag is no longer supported in HTML 5. The image below demonstrates the use of the <br><b>&lt;img&gt;</b> tag and its assosciated attributes.</p>
+
+        <!-- Creating figure box to store code for the Image-->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;img src=&quot;https://images.unsplash.com/photo-1506106496075-402bf5161d2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80I&quot; 
+                 alt=&quot;Night Skyline&quot; height= 290px width= 600px
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store output for the Image-->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <img src="https://images.unsplash.com/photo-1506106496075-402bf5161d2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80I" 
+            alt="Night Skyline" height= 290 width= 600>
+        </figure>
+
+        <!-- HTML Anchor description -->
+        <h2>Anchor</h2>
+
+        <p>Using the Anchor <b>&lt;a&gt;</b> tag, hyperlinks can be defined within a HTML page. This tag can be used for either hyperlinks or images. The attributes for this tag are <b>"href"</b> (defines the link address of the webpage/image) and <b>"target"</b> (defines where to open the linked webpage/image). In the following example, the 'target' attribute's value is set to <b>"_blank"</b>, to open the webpage in a new tab.</p>
+
+        <!-- Creating figure box to store code for the Anchor-->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;a href=&quot;http://teaching.csse.uwa.edu.au/units/CITS3403&quot; target=&quot;_blank&quot;&gt;CITS3403 Home Page&lt;/a&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store output for the Anchor-->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <a href="http://teaching.csse.uwa.edu.au/units/CITS3403" target="_blank">CITS3403 Home Page</a>
+        </figure>
+
+        <!-- HTML Video description -->
+        <h2> Video </h2>
+
+        <p>The HTML Video <b>&lt;video&gt;</b> tag allows videos to be played on a webpage. The tag supports 3 video formats, MP4, WebM and Ogg. The tag has a number of optional attributes such as <br>"src" (video file source), "autoplay" (video starts playing when ready), "loop" (video restarts whenever playback is over),and many more. An example of a MP4 video can be found below.</p>
+
+        <!-- Creating figure box to store code for the Video -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;video width=&quot;600&quot; height=&quot;290&quot; controls loop&gt;
+                    &lt;source src=&quot;assets/lemon.mp4&quot; type=&quot;video/mp4&quot;&gt;
+                &lt;/video&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store output for the Video -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <video width=600 height=290 controls loop>
+                <source src="assets/lemon.mp4" type="video/mp4">
+            </video>
+        </figure>
+
+        <!-- HTML Objects description -->
+        <h2>Object</h2>
+        <p>The <b>&lt;object&gt;</b> tag allows for an emebedded object within the HTML page. The tag can be used to embed media (audio and video files), PDF and Flash files. The main attributes of this HTML element is <b>data</b>, which specifies the URL of the resource to be embedded and <b>type</b>, specifying the type of file to be used. To demonstrate the use of this element, I have embedded a PDF file using the <b>&lt;object&gt;</b> tag below. </p>
+
+        <!-- Creating figure box to store code for Object -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                &lt;object data=&quot;assets/Project1.pdf&quot; type=&quot;application/pdf&quot; width= 50% height=500px&gt;
+                &lt;/object&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store output for the Object -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <br>
+            <object data="assets/Project1.pdf" type="application/pdf" width= 600 height=800>
+            </object>
+        </figure>
+
+        <!-- HTML Meter description -->
+        <h2>Meter</h2>
+        <p>The HTML <b>&lt;meter&gt;</b> element can be used to represent either a scalar or fractional value within a given range. The main attributes for this tag are <b>value</b> - the current numeric value, <b>min</b> - lower bound of the rang and <b>max</b> - upper bound of the range. Optional attributes include <b>low</b> - the range that is considered to be a low value, <b>high</b> - the range that is considered to be a high value and <b>optimum</b> - specifies what the ideal value for the scale is. The use of the <b>&lt;meter&gt;</b> tag is demonstrated below with two examples, one with the main attributes and the other with some of the optional attributes.</p>
+
+        <!-- Creating figure box to store code for Meter -->
+        <figure class="codebox">
+            <figcaption>Code:</figcaption>
+            <pre><code>
+                // Example using the main attributes:
+                &lt;p&gt;Disk usage C: &lt;meter id=&quot;disk_c&quot; value=&quot;6&quot; min=&quot;0&quot; max=&quot;10&quot;&gt;6 out of 10&lt;/meter&gt; 60% used.&lt;/p&gt;&lt;br&gt;
+
+                // Example using an optional attribute (low)
+
+                &lt;p&gt;Disk usage D: &lt;meter id=&quot;disk_d&quot; value=&quot;2&quot; min=&quot;0&quot; max=&quot;10&quot; low =&quot;3&quot;&gt;6 out of 10&lt;/meter&gt; 20% used.&lt;/p&gt;
+
+                // Example using an optional attribute (high) 
+
+                &lt;p&gt;Disk usage E: &lt;meter id=&quot;disk_e&quot; value=&quot;9&quot; min=&quot;0&quot; max=&quot;10&quot; high=&quot;8&quot;&gt;6 out of 10&lt;/meter&gt; 90% used.&lt;/p&gt;
+            </code></pre>
+        </figure>
+
+        <!-- Creating figure box to store output for Meter -->
+        <figure class="codebox">
+            <figcaption>Output:</figcaption>
+            <p>Disk usage C: <meter id="disk_c" value="6" min="0" max="10">6 out of 10</meter> 60% used.</p>
+
+            <p>Disk usage D: <meter id="disk_d" value="2" min="0" max="10" low ="3">6 out of 10</meter> 20% used.</p>
+
+            <p>Disk usage E: <meter id="disk_e" value="9" min="0" max="10" high="8">6 out of 10</meter> 90% used.</p>
+
+        </figure> 
+
+        <p>As we can see in the example above, when having a value below/above the low/high attribute value, the colour of the meter changes, to signify that the value is part of the upper or lower bound.</p>
+    </body>
+</html>

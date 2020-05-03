@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+/*importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Sans+Narrow&display=swap');
+
+/* Add a background color to the top navigation */
+.topnav 
+{
+  background-color: #AC3B61;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a
+{
+  float: left;
+  color: rgb(209, 202, 205);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover 
+{
+  background-color: #45A29E;
+  color: #000000;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active 
+{
+  background-color: #45A29E;
+  color: white;
+}
+
+/* Style the body of the page */
+body
+{
+  background-color:#1F2833;
+  color: #BAB2B5;
+  font-family: 'Duru Sans', sans-serif;
+  line-height: 1.5;
+}
+
+/* Style the <h1> element */
+h1
+{
+  font-family:'Montserrat', sans-serif;
+  color: #66FCF1;
+  margin-left: 5px;
+}
+
+/* Style the <h2> element */
+h2
+{
+  font-family:'Montserrat', sans-serif;
+  color: #45A29E;
+  margin-left: 5px;
+}
+
+/* Style the <h3> element */
+h3
+{
+  color: #AC3B61;
+  margin-left: 5px;
+}
+
+/* Style the <h4> element */
+h4
+{
+  margin-left: 5px;
+  margin-right: 150px;
+}
+
+/* Style the <p> element  */
+p
+{
+  margin-left: 25px;
+  margin-right: 400px;
+  color: #BAB2B5;
+}
+
+/* Style the <table>, <th>, <td> elements with class = ".styled_table" */
+.styled_table table, 
+.styled_table th, 
+.styled_table td
+{
+  border-collapse: collapse;
+  border: 1px solid #BAB2B5;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right:auto;
+  
+}
+
+/* Style the <tr> element with class = "styled_table" and use psuedo-class selector */
+.styled_table tr:nth-child(even)
+{
+  background-color: #BAB2B5;
+  color: black;
+}
+
+/* Style the <tr> element with class = "styled_table" and use psuedo-class selector */
+.styled_table tr:nth-child(odd)
+{
+  background-color: rgb(89, 139, 137);
+  color: black;
+}
+
+/* Style the <td> element with class = "styled_table" and use psuedo-class selector */
+.styled_table td:hover 
+{
+  background-color: green;
+
+}
+
+/* Style the <textarea> element within the form */
+textarea
+{
+  width: 250px;
+  height: 50px;
+  resize: none;
+}
+
+/* Style the <fieldset> element of the form */
+fieldset
+{
+  width: 400px;
+}
+
+/* Style the figure box with class = ".codebox" */
+.codebox
+{
+  box-sizing: border-box;
+  width: 45%;
+  max-height: 400px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Style the <pre> element of figure box with class = ".codebox" */
+.codebox pre
+{
+  margin: 0;
+  position: relative;
+  left: -90px;
+ }
+
+ /* Style the <img> element with class = ".dom_img" */
+.dom_img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the <fielset> element belonging to the form with class = ".css_form" */
+.css_form fieldset
+{
+  font-family:'Montserrat', sans-serif;
+  border-color: #AC3B61;
+  border-width: 5px;
+  border-radius: 5px;
+  color: #45A29E;
+}
+
+/* Style the <input> element belonging to the form with class = "css_form" */
+.css_form input
+{
+  background-color: #BAB2B5;
+  color:black;
+  border-radius: 4px;
+}
+
+/* Style the <legend> element belonging to the form with class = "css_form" */
+.css_form legend
+{
+  font-size: 25px;
+}
+
+/* Style the <input> element belonging to the form with class = "css_form" with attribute selector */
+.css_form input[type=submit]
+{
+  background-color: rgb(74, 190, 77);
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style the <textarea> element belonging to the form with class = "css_form" */
+.css_form textarea
+{
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #BAB2B5;
+}
+
+/* Style the <input> element belonging to the form with class = "inp" with attribute selector */
+.inp[type=submit]
+{
+  background-color: rgb(74, 190, 77);
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style <p> element with id = "cascading_para" */
+#cascading_para 
+{
+  color: red;
+}
+
+/* Style <p> element with id = "para2" */
+#para2
+{
+  color: rgb(44, 241, 44);
+}
+
+/* Style elements with class = "class_selector" */
+.class_selector
+{
+  color: red;
+}
+
+/* Style <p> element with class = "descendent_selector" */
+.descendent_selector p
+{
+  background-color:  rgb(44, 241, 44);
+  border-radius: 3px;
+  width: 40%;
+  color: black;
+}
+
+/* Style <p> element with class = "child_selector" */
+.child_selector > p
+{
+  background-color:  orange;
+  border-radius: 3px;
+  width: 40%;
+  color: black;
+}
+
+/* Style <p> element with class = "adj_sibling_selector" */
+.adj_sibling_selector + p
+{
+  background-color:  lightblue;
+  border-radius: 3px;
+  width: 40%;
+  color: black;
+}
+
+/* Style <p> element with class = "gen_selector" */
+.gen_sibling_selector ~ p 
+{
+  background-color:  pink;
+  border-radius: 3px;
+  width: 40%;
+  color: black;
+}
+
+/* Style all elements with class = "universal_selector" */
+.universal_selector *
+{
+  text-align: center;
+}
+
+/* Style elements with class = "grouping_selector" */
+.grouping_selector h1,
+.grouping_selector h2,
+.grouping_selector h3
+{
+  text-align: center;
+}
+
+/* Style <p> element belonging to class = "pseudo_element" using pseudo-element ::first-letter */
+.pseudo_element p::first-letter
+{
+  color: #AC3B61;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Style elements belonging to class = "pseudo_element" using pseudo-element ::first-line */
+.pseudo_element::first-line
+{
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Style <p> element belonging to class = "pseudo_element" using pseudo-element ::selection */
+.pseudo_element p::selection
+{
+  color: white;
+  background-color: red;
+}
+
+/* Style <p> element belonging to class = "pseudo_element" using pseudo-element ::after */
+.pseudo_element::after 
+{
+  content: "IMPORTANT";
+  color: white;
+  background-color: red;
+}
+
+/* Style <img> element with class = "bio_pic" */
+.bio_pic
+{
+  width: 20%;
+  height:auto;
+  border-radius: 50%;
+  margin-right: 100px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  float: right;
+}
+
+/* Style <figure> element  with class = ".codebox_bio" */
+.codebox_bio
+{
+  box-sizing: border-box;
+  width: 60%;
+  border-style: dashed;
+  border-color: #AC3B61;
+  margin-top: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Style <button> element with id = "button" */
+#button
+{
+  background-color: rgb(74, 190, 77);
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+}
+
+/* Style button 'hide' function from apax.js */
+.hide-me {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(.75);
+}
